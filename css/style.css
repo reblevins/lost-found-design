@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather|Roboto:400,400i,700");
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #4A4A4A;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Merriweather", serif;
+}
+h1 div, h2 div, h3 div, h4 div, h5 div, h6 div {
+  font-size: inherit;
+  font-family: inherit;
+  display: inline-block;
+}
+
+h1 {
+  margin: 0;
+  line-height: 0.8em;
+  font-size: 6.6rem;
+}
+h1 div.header-found {
+  transform: rotate(180deg);
+}
+
+a {
+  display: inline-block;
+  color: #2eb2ff;
+}
+a.article-link {
+  color: #4A4A4A;
+  text-decoration: none;
+}
+
+header {
+  padding: 1rem;
+}
+header .header-lost {
+  color: #2eb2ff;
+}
+header .header-amp {
+  margin-left: -20px;
+}
+header h1 {
+  min-height: 12rem;
+}
+header h2.subtitle {
+  margin-bottom: 0;
+  color: #9e9d9d;
+  text-align: right;
+  font-size: 1.2em;
+}
+header h1 span {
+  color: #2eb2ff;
+  font-family: inherit;
+}
+@media all and (min-width: 667px) {
+  header h1 {
+    max-width: 75%;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+main {
+  margin: 2rem 0;
+}
+@media all and (min-width: 667px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    margin: 2rem 1rem;
+  }
+}
+
+article {
+  line-height: 1.6em;
+  font-size: 1em;
+  letter-spacing: 2px;
+}
+article.mini-post {
+  padding-bottom: 1em;
+}
+article.mini-post h2 {
+  margin: 1em 0 0.5em 0;
+  border-bottom: 1px solid;
+  width: fit-content;
+}
+article.mini-post h4, article.mini-post p {
+  margin: 0.5em 0;
+}
+article.mini-post h4 {
+  color: #BDBDBD;
+  font-style: italic;
+  font-weight: normal;
+  font-family: "Roboto", sans-serif;
+}
+article .inner {
+  margin: 0 1em;
+}
+@media all and (min-width: 667px) {
+  article.mini-post {
+    line-height: 1.6em;
+  }
+  article img.post-banner {
+    border-radius: 7px;
+  }
+}

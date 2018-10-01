@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Roboto:400,400i,700');
+
+$bodyFontColor: #4A4A4A;
+$primaryColor: #2eb2ff;
+$headerFont: 'Merriweather', serif;
+$bodyFont: 'Roboto', sans-serif;
+
+html {
+	font-size: 100%;
+}
+
+body {
+	font-family: $bodyFont;
+	color: $bodyFontColor;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $headerFont;
+
+	div { font-size: inherit; font-family: inherit; display: inline-block; }
+}
+
+h1 {
+	// font-size: 18rem;
+    margin: 0;
+    line-height: 0.8em;
+
+    font-size: 6.6rem;
+
+    & div.header-found {
+	    transform: rotate(180deg);
+	}
+}
+
+a {
+	display: inline-block;
+	color: $primaryColor;
+	&.article-link { color: $bodyFontColor; text-decoration: none; }
+}
+
+header {
+	// padding: 3rem 1rem;
+	padding: 1rem;
+
+	.header-lost {
+	    color: #2eb2ff;
+	}
+	.header-amp {
+	    margin-left: -20px;
+	}
+
+	h1 {
+		min-height: 12rem;
+	}
+	h2.subtitle {
+	    margin-bottom: 0;
+	    color: #9e9d9d;
+	    text-align: right;
+	    font-size: 1.2em;
+	}
+
+	h1 span {
+		color: #2eb2ff;
+		font-family: inherit;
+	}
+
+	@media all and(min-width: 667px) {
+		h1 {
+			max-width: 75%;
+		}
+	}
+}
+
+img {
+	width: 100%;
+}
+
+main {
+	// margin: 3rem 0;
+	margin: 2rem 0;
+
+	@media all and(min-width: 667px) {
+		display: grid;
+	    grid-template-columns: 1fr 1fr;
+	    grid-gap: 1rem;
+	    margin: 2rem 1rem;
+	}
+}
+
+article {
+	line-height: 1.6em;
+    // font-size: 2.3em;
+    font-size: 1em;
+    letter-spacing: 2px;
+
+    &.mini-post {
+    	// border-bottom: 4px solid #EEEEEE;
+	    padding-bottom: 1em;
+
+    	h2 {
+    		margin: 1em 0 0.5em 0;
+    		border-bottom: 1px solid;
+		    width: fit-content;
+    	}
+
+    	h4, p {
+		    margin: 0.5em 0;
+		}
+		h4 {
+			color: #BDBDBD;
+		    font-style: italic;
+		    font-weight: normal;
+		    font-family: $bodyFont;
+		}
+    }
+
+	img {
+		&.post-banner {
+			// border-radius: 15px;
+		}
+	}
+
+	.inner {
+		margin: 0 1em;
+	}
+
+	@media all and(min-width: 667px) {
+		&.mini-post {
+			line-height: 1.6em;
+		    // font-size: 1.2em;
+		}
+
+		img.post-banner {
+		    border-radius: 7px;
+		}
+	}
+}
