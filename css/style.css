@@ -17,15 +17,6 @@ h1 div, h2 div, h3 div, h4 div, h5 div, h6 div {
   display: inline-block;
 }
 
-h1 {
-  margin: 0;
-  line-height: 0.8em;
-  font-size: 6.6rem;
-}
-h1 div.header-found {
-  transform: rotate(180deg);
-}
-
 a {
   display: inline-block;
   color: #2eb2ff;
@@ -45,21 +36,34 @@ header .header-amp {
   margin-left: -20px;
 }
 header h1 {
-  min-height: 12rem;
+  margin: 0;
+  line-height: 0.8em;
+  min-height: 13rem;
+  font-size: 7.4rem;
+}
+header h1 div.header-found {
+  transform: rotate(180deg);
 }
 header h2.subtitle {
   margin-bottom: 0;
   color: #9e9d9d;
   text-align: right;
   font-size: 1.2em;
+  line-height: 1.4em;
 }
 header h1 span {
   color: #2eb2ff;
   font-family: inherit;
 }
 @media all and (min-width: 667px) {
-  header h1 {
-    max-width: 75%;
+  header {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    grid-gap: 1em;
+  }
+  header h2.subtitle {
+    margin: 0 0 0.7em 0;
+    align-self: end;
   }
 }
 
