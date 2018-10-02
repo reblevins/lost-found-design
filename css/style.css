@@ -19,9 +19,9 @@ h1 div, h2 div, h3 div, h4 div, h5 div, h6 div {
 
 a {
   display: inline-block;
-  color: #2eb2ff;
+  color: initial;
 }
-a.article-link {
+a.home-link, a.article-link {
   color: #4A4A4A;
   text-decoration: none;
 }
@@ -92,8 +92,8 @@ article.mini-post {
   padding-bottom: 1em;
 }
 article.mini-post h2 {
-  margin: 1em 0 0.5em 0;
-  border-bottom: 1px solid;
+  margin: 0;
+  text-decoration: underline;
   width: fit-content;
 }
 article.mini-post h4, article.mini-post p {
@@ -104,6 +104,11 @@ article.mini-post h4 {
   font-style: italic;
   font-weight: normal;
   font-family: "Roboto", sans-serif;
+}
+article.mini-post a.article-link {
+  display: grid;
+  grid-template-rows: 0.7fr 0.3fr 2fr;
+  align-items: end;
 }
 article .inner {
   margin: 0 1em;
@@ -116,3 +121,48 @@ article .inner {
     border-radius: 7px;
   }
 }
+
+@media all and (min-width: 1024px) {
+  header, main {
+    padding: 0;
+    grid-gap: 2rem 3rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  main {
+    margin: 2rem;
+  }
+
+  header {
+    margin-right: 2rem;
+    width: 20%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 2rem;
+  }
+  header a.home-link {
+    transform: rotate(-90deg);
+    height: 11rem;
+    width: 21rem;
+    margin-left: -4rem;
+    margin-top: 6.5rem;
+  }
+  header h1 {
+    font-size: 6.5rem;
+  }
+  header h2.subtitle {
+    margin-top: 7rem;
+  }
+
+  main {
+    margin-left: 27%;
+  }
+
+  article.mini-post p {
+    font-size: 0.9rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

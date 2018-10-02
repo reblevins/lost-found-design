@@ -22,8 +22,9 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
 	display: inline-block;
-	color: $primaryColor;
-	&.article-link { color: $bodyFontColor; text-decoration: none; }
+	color: initial;
+
+	&.home-link, &.article-link { color: $bodyFontColor; text-decoration: none; }
 }
 
 header {
@@ -103,8 +104,8 @@ article {
 	    padding-bottom: 1em;
 
     	h2 {
-    		margin: 1em 0 0.5em 0;
-    		border-bottom: 1px solid;
+    		margin: 0;
+    		text-decoration: underline;
 		    width: fit-content;
     	}
 
@@ -116,6 +117,12 @@ article {
 		    font-style: italic;
 		    font-weight: normal;
 		    font-family: $bodyFont;
+		}
+
+		a.article-link {
+		    display: grid;
+		    grid-template-rows: 0.7fr 0.3fr 2fr;
+		    align-items: end;
 		}
     }
 
@@ -138,5 +145,49 @@ article {
 		img.post-banner {
 		    border-radius: 7px;
 		}
+	}
+}
+
+@media all and(min-width: 1024px) {
+	header, main {
+		// margin: 2rem 3rem;
+		padding: 0;
+		grid-gap: 2rem 3rem;
+		grid-template-columns: 1fr 1fr;
+	}
+	main {
+		margin: 2rem;
+	}
+
+	header {
+		margin-right: 2rem;
+        width: 20%;
+	    display: inline-block;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    padding-left: 2rem;
+
+		a.home-link {
+		    transform: rotate(-90deg);
+			height: 11rem;
+		    width: 21rem;
+		    margin-left: -4rem;
+		    margin-top: 6.5rem;
+		}
+		h1 {
+			font-size: 6.5rem;
+		}
+		h2.subtitle {
+			margin-top: 7rem;
+		}
+	}
+
+	main {
+		margin-left: 27%;
+	}
+
+	article.mini-post p {
+	    font-size: 0.9rem;
 	}
 }
